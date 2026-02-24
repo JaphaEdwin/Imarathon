@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Independence Marathon — Run for the Nation</title>
+  <meta name="description" content="Uganda's premier national marathon. 5K, 10K, 21K, 42K & Corporate Relay. 11 October 2026, Northern Bypass, Kampala.">
+  <meta property="og:title" content="Independence Marathon — Run for the Nation">
+  <meta property="og:description" content="Uganda's premier national endurance event. A structured social movement anchored in BELONG, OWN, BE PART, and PRIDE.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://independencemarathon.ug">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <!-- Structured Data: Event -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "Independence Marathon 2026",
+    "description": "Uganda's premier national marathon — a structured social movement anchored in belonging, ownership, participation, and pride.",
+    "startDate": "2026-10-11",
+    "endDate": "2026-10-11",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Northern Bypass, Kampala, Uganda",
+      "address": { "@type": "PostalAddress", "addressLocality": "Kampala", "addressCountry": "UG" }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Independence Marathon Organising Committee"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     HEADER
+     ════════════════════════════════════════════ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#/" class="header__logo" onclick="navigate('/')">
+      <span class="header__logo-mark"></span>
+      <span>
+        <span style="display:block;line-height:1">INDEPENDENCE</span>
+        <span class="header__logo-sub">MARATHON</span>
+      </span>
+    </a>
+    <nav class="header__nav" id="desktopNav">
+      <a href="#/about" class="header__link" data-route="/about">About</a>
+      <a href="#/register" class="header__link" data-route="/register">Register</a>
+      <a href="#/course" class="header__link" data-route="/course">Course</a>
+      <a href="#/runner-hub" class="header__link" data-route="/runner-hub">Runner Hub</a>
+      <a href="#/community" class="header__link" data-route="/community">Community</a>
+      <a href="#/sponsors" class="header__link" data-route="/sponsors">Sponsors</a>
+      <a href="#/results" class="header__link" data-route="/results">Results</a>
+      <a href="#/race-day" class="header__link" data-route="/race-day">Race Day</a>
+      <a href="#/contact" class="header__link" data-route="/contact">Contact</a>
+    </nav>
+    <a href="#/register" class="btn btn--crimson btn--sm header__cta" onclick="trackEvent('register_click','header')">Register Now</a>
+    <button class="header__menu-btn" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav__overlay" onclick="toggleMobileNav()"></div>
+  <div class="mobile-nav__panel">
+    <button class="mobile-nav__close" onclick="toggleMobileNav()">✕</button>
+    <a href="#/" class="mobile-nav__link" data-route="/" onclick="toggleMobileNav()">Home</a>
+    <a href="#/about" class="mobile-nav__link" data-route="/about" onclick="toggleMobileNav()">About</a>
+    <a href="#/register" class="mobile-nav__link" data-route="/register" onclick="toggleMobileNav()">Register</a>
+    <a href="#/course" class="mobile-nav__link" data-route="/course" onclick="toggleMobileNav()">Course</a>
+    <a href="#/runner-hub" class="mobile-nav__link" data-route="/runner-hub" onclick="toggleMobileNav()">Runner Hub</a>
+    <a href="#/community" class="mobile-nav__link" data-route="/community" onclick="toggleMobileNav()">Community</a>
+    <a href="#/sponsors" class="mobile-nav__link" data-route="/sponsors" onclick="toggleMobileNav()">Sponsors</a>
+    <a href="#/results" class="mobile-nav__link" data-route="/results" onclick="toggleMobileNav()">Results</a>
+    <a href="#/race-day" class="mobile-nav__link" data-route="/race-day" onclick="toggleMobileNav()">Race Day</a>
+    <a href="#/media" class="mobile-nav__link" data-route="/media" onclick="toggleMobileNav()">Media</a>
+    <a href="#/contact" class="mobile-nav__link" data-route="/contact" onclick="toggleMobileNav()">Contact</a>
+    <div style="margin-top:24px">
+      <a href="#/register" class="btn btn--crimson" style="width:100%" onclick="toggleMobileNav()">Register Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Sticky Register Bar -->
+<div class="mobile-register-bar" id="mobileRegBar">
+  <div class="mobile-register-bar__info">
+    <strong>11 Oct 2026 · Kampala</strong>
+    5K · 10K · 21K · 42K · Relay
+  </div>
+  <a href="#/register" class="btn btn--crimson btn--sm" onclick="trackEvent('register_click','sticky_bar')">Register</a>
+</div>
+
+<!-- ════════════════════════════════════════════
+     PAGE CONTAINER
+     ════════════════════════════════════════════ -->
+<div id="app" class="page-content"></div>
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════ -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <span style="width:3px;height:32px;background:var(--crimson)"></span>
+          <span>
+            <span style="color:var(--white);font-family:var(--font-display);font-weight:700;letter-spacing:3px;font-size:0.95rem;display:block;line-height:1">INDEPENDENCE</span>
+            <span style="color:var(--gold);font-family:var(--font-display);font-size:0.6rem;letter-spacing:5px">MARATHON</span>
+          </span>
+        </div>
+        <p class="footer__brand-desc">Uganda's premier national endurance event — a structured social movement anchored in belonging, ownership, participation, and pride.</p>
+        <div class="footer__socials">
+          <a href="https://facebook.com/imarathonug" target="_blank" class="footer__social" title="Facebook">f</a>
+          <a href="https://instagram.com/imarathonug" target="_blank" class="footer__social" title="Instagram">ig</a>
+          <a href="https://x.com/imarathonug" target="_blank" class="footer__social" title="X/Twitter">𝕏</a>
+          <a href="https://youtube.com/@imarathonug" target="_blank" class="footer__social" title="YouTube">▶</a>
+          <a href="https://strava.com/clubs/imarathon" target="_blank" class="footer__social" title="Strava">S</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__heading">RACE</div>
+        <a href="#/register" class="footer__link">Register</a>
+        <a href="#/course" class="footer__link">Course & Route</a>
+        <a href="#/results" class="footer__link">Results</a>
+        <a href="#/runner-hub" class="footer__link">Runner Hub</a>
+        <a href="#/race-day" class="footer__link">Race Day Hub</a>
+      </div>
+      <div>
+        <div class="footer__heading">GET INVOLVED</div>
+        <a href="#/community" class="footer__link">Running Clubs</a>
+        <a href="#/community" class="footer__link">Volunteer</a>
+        <a href="#/sponsors" class="footer__link">Sponsor</a>
+        <a href="#/about" class="footer__link">Our Story</a>
+        <a href="#/media" class="footer__link">Media Centre</a>
+      </div>
+      <div>
+        <div class="footer__heading">NEWSLETTER</div>
+        <p style="font-size:0.78rem;margin-bottom:8px;color:rgba(255,255,255,0.4)">Get race updates and training tips.</p>
+        <div class="footer__newsletter" id="footerNewsletter">
+          <input type="email" placeholder="Your email" id="footerEmail" required>
+          <button class="btn btn--crimson btn--sm" onclick="submitFooterNewsletter()">Join</button>
+        </div>
+        <div style="margin-top:20px">
+          <div class="footer__heading">CONTACT</div>
+          <a href="mailto:info@independencemarathon.ug" class="footer__link">info@independencemarathon.ug</a>
+          <a href="tel:+256700000000" class="footer__link">+256 700 000 000</a>
+          <a href="https://wa.me/256700000000" target="_blank" class="footer__link" style="color:#25D366">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Independence Marathon. All rights reserved.</span>
+      <span>
+        <a href="#/contact" style="color:rgba(255,255,255,0.4);margin-right:16px">Privacy Policy</a>
+        <a href="#/contact" style="color:rgba(255,255,255,0.4);margin-right:16px">Terms & Conditions</a>
+        <a href="#/contact" style="color:rgba(255,255,255,0.4)">Indemnity Declaration</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
