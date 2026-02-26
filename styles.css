@@ -252,6 +252,13 @@ tr:nth-child(even) { background: rgba(255,255,255,0.02); }
   font-family: var(--font-display); font-weight: 700; font-size: 1rem;
   letter-spacing: 3px; text-transform: uppercase;
 }
+.header__logo-img{
+  height: 34px;
+  width: auto;
+  display: block;
+  flex: 0 0 auto;
+}
+.header__logo-text{ display:block; }
 .header__logo-mark {
   width: 3px; height: 32px; background: var(--crimson);
 }
@@ -272,6 +279,24 @@ tr:nth-child(even) { background: rgba(255,255,255,0.02); }
 }
 .header__menu-btn span {
   width: 22px; height: 1.5px; background: var(--white); transition: all 0.3s;
+}
+
+/* Logo sizing balance on smaller screens */
+@media (max-width: 520px){
+  .header__logo{ gap: 10px; letter-spacing: 2.5px; }
+  .header__logo-img{ height: 30px; }
+  .header__logo-sub{ letter-spacing: 4px; }
+}
+
+/* Footer logo */
+.footer__logo-img{
+  height: 36px;
+  width: auto;
+  display: block;
+  flex: 0 0 auto;
+}
+@media (max-width: 520px){
+  .footer__logo-img{ height: 32px; }
 }
 
 @media (min-width: 1100px) {
